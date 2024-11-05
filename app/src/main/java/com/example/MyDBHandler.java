@@ -23,11 +23,11 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_PRODUCTS_TABLE = "CREATE TABLE " +
                 TABLE_PRODUCTS + "("
-                + COLUMN_ID + " INTEGER PRIMARY KEY, "
-                + COLUMN_PRODUCTNAME + " TEXT, "
-                + COLUMN_SKU + " INTEGER" + ")";
+                + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PRODUCTNAME
+                + " TEXT," + COLUMN_SKU + " INTEGER" + ")";
         db.execSQL(CREATE_PRODUCTS_TABLE);
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
